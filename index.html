@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <style>
     :root {
       --bg: #08090d;
@@ -63,8 +64,11 @@
     .nav-inner { height: 74px; display:flex; align-items:center; justify-content:space-between; }
     .logo { font-weight: 800; letter-spacing:-.04em; font-size: 20px; }
     .logo span { color: var(--accent); }
-    .nav-links { display:flex; gap:28px; color:var(--muted); font-size:14px; }
-    .nav-links a:hover { color:var(--text); }
+    .nav-links { display:flex; gap:28px; color:var(--muted); font-size:14px; margin-right:auto; }
+    .nav-links a { position:relative; padding:8px 0; transition:color .2s ease; }
+    .nav-links a::after { content:""; position:absolute; left:0; right:100%; bottom:0; height:2px; background:var(--accent); transition:right .25s ease; }
+    .nav-links a:hover, .nav-links a.active { color:var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { right:0; }
     .nav-cta {
       padding:10px 16px; border:1px solid var(--line); border-radius:999px;
       background:rgba(255,255,255,.04); font-size:14px;
@@ -255,8 +259,7 @@
     .nav-cta { border-color: var(--text); background: var(--text); color: var(--bg); border-radius: 3px; }
     .hero { padding: 105px 0 90px; }
     .hero > .container { position: relative; }
-    .hero > .container::after {
-      content: "";
+    .hero-portrait {
       position: absolute;
       width: 150px;
       height: 150px;
@@ -264,7 +267,10 @@
       border-radius: 50%;
       right: 5%;
       top: 25px;
-      opacity: .65;
+      object-fit: cover;
+      object-position: center;
+      padding: 4px;
+      background: var(--bg);
     }
     .eyebrow {
       color: var(--accent-2);
@@ -307,12 +313,21 @@
     .project:nth-child(3) .project-visual { background: #d8dfe9; }
     .visual-grid { height: 190px; border-color: rgba(24,32,42,.18); background-image: linear-gradient(rgba(24,32,42,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(24,32,42,.1) 1px, transparent 1px); }
     .visual-grid::after { border-color: var(--accent); box-shadow: none; border-radius: 2px; }
+    .proof-mark {
+      position: absolute; top: 24px; left: 24px; z-index: 1;
+      display: grid; place-items: center; width: 64px; height: 64px;
+      border: 1px solid rgba(24,32,42,.3); border-radius: 50%;
+      color: var(--text); font-size: 24px; font-weight: 700; letter-spacing: -.08em;
+    }
+    .proof-mark span { font-family: "Instrument Serif", Georgia, serif; font-size: 30px; font-weight: 400; }
+    .proof-mark i { font-size: 28px; }
     .project-content { padding: 44px; }
     .project-label { color: var(--accent-2); }
     .project h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 40px; line-height: .95; }
     .project-tech { color: var(--accent-2); }
     .stack { gap: 8px; }
-    .stack span { padding: 9px 12px; }
+    .stack span { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; }
+    .stack i { font-size: 17px; color: var(--text); }
     .timeline { border-top-color: var(--text); }
     .role { grid-template-columns: 190px 1fr; border-bottom-color: var(--line); }
     .role-date { color: var(--accent); }
@@ -326,7 +341,7 @@
     .reveal { transform: translateY(12px); }
 
     @media(max-width:800px) {
-      .hero > .container::after { width: 90px; height: 90px; right: 4%; top: 35px; }
+      .hero-portrait { width: 90px; height: 90px; right: 4%; top: 35px; }
       .services { grid-template-columns: repeat(2, 1fr); }
       .project { grid-template-columns: 1fr; }
       .project-visual { min-height: 220px; }
@@ -334,7 +349,6 @@
     @media(max-width:520px) {
       h1 { font-size: 58px; }
       .services { grid-template-columns: 1fr; }
-      .hero > .container::after { display: none; }
       .project-content { padding: 28px 24px; }
       .project h3 { font-size: 35px; }
     }
@@ -344,10 +358,9 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#">GA<span>.</span></a>
       <nav class="nav-links">
-        <a href="#services">Capabilities</a>
-        <a href="#work">Selected work</a>
+        <a class="active" href="#services">Capabilities</a>
+        <a href="#work">Selected Work</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -358,6 +371,7 @@
   <main>
     <section class="hero">
       <div class="container">
+        <img class="hero-portrait" src="images/profile.png" alt="Portrait of Ghulam Ali" />
         <div class="eyebrow"><span class="dot"></span> 8+ years · software engineering · practical AI</div>
         <h1>I build the systems that make <span class="gradient">ambitious work reliable.</span></h1>
         <p class="hero-copy">
@@ -429,7 +443,7 @@
 
         <div class="work">
           <article class="project reveal">
-            <div class="project-visual"><div class="visual-grid"></div></div>
+            <div class="project-visual"><div class="proof-mark"><i class="devicon-playwright-plain"></i></div><div class="visual-grid"></div></div>
             <div class="project-content">
               <span class="project-label">AI / Quality Engineering</span>
               <h3>AI-powered visual QA</h3>
@@ -439,7 +453,7 @@
           </article>
 
           <article class="project reveal">
-            <div class="project-visual"><div class="visual-grid"></div></div>
+            <div class="project-visual"><div class="proof-mark"><span>AI</span></div><div class="visual-grid"></div></div>
             <div class="project-content">
               <span class="project-label">AI / Developer Productivity</span>
               <h3>GitHub engineering agent</h3>
@@ -449,7 +463,7 @@
           </article>
 
           <article class="project reveal">
-            <div class="project-visual"><div class="visual-grid"></div></div>
+            <div class="project-visual"><div class="proof-mark"><span>Q&amp;A</span></div><div class="visual-grid"></div></div>
             <div class="project-content">
               <span class="project-label">AI / Document Intelligence</span>
               <h3>MonteurAI</h3>
@@ -459,7 +473,7 @@
           </article>
 
           <article class="project reveal">
-            <div class="project-visual"><div class="visual-grid"></div></div>
+            <div class="project-visual"><div class="proof-mark"><span>→</span></div><div class="visual-grid"></div></div>
             <div class="project-content">
               <span class="project-label">Modernization / Enterprise</span>
               <h3>Legacy Delphi → modern web</h3>
@@ -478,11 +492,11 @@
           <p class="section-intro">A senior engineering foundation combined with modern AI and cloud tooling.</p>
         </div>
         <div class="stack reveal">
-          <span>C# / .NET 6–10</span><span>ASP.NET Core</span><span>Angular 19</span><span>React</span>
-          <span>TypeScript</span><span>Azure</span><span>Azure Service Bus</span><span>Azure DevOps</span>
-          <span>GitHub Actions</span><span>GitHub agents</span><span>Playwright</span><span>Docker</span><span>SQL Server</span><span>MongoDB</span>
-          <span>Redis</span><span>Entity Framework Core</span><span>Microservices</span><span>CQRS / DDD</span>
-          <span>Microsoft Graph</span><span>SharePoint</span><span>Claude API</span><span>AI Agents</span><span>Visual Regression</span>
+          <span><i class="devicon-csharp-plain"></i>C# / .NET 6–10</span><span><i class="devicon-dotnetcore-plain"></i>ASP.NET Core</span><span><i class="devicon-angularjs-plain"></i>Angular 19</span><span><i class="devicon-react-original"></i>React</span><span><i class="devicon-vuejs-plain"></i>Vue.js</span>
+          <span><i class="devicon-typescript-plain"></i>TypeScript</span><span><i class="devicon-azure-plain"></i>Azure</span><span><i class="devicon-azuredevops-plain"></i>Azure DevOps</span>
+          <span><i class="devicon-github-original"></i>GitHub Actions</span><span><i class="devicon-github-original"></i>GitHub agents</span><span><i class="devicon-playwright-plain"></i>Playwright</span><span><i class="devicon-docker-plain"></i>Docker</span><span><i class="devicon-microsoftsqlserver-plain"></i>SQL Server</span><span><i class="devicon-mongodb-plain"></i>MongoDB</span>
+          <span><i class="devicon-redis-plain"></i>Redis</span><span><i class="devicon-dotnetcore-plain"></i>Entity Framework Core</span><span><span>◈</span>Microservices</span><span><span>⌘</span>CQRS / DDD</span>
+          <span><span>◎</span>Microsoft Graph</span><span><span>▦</span>SharePoint</span><span><span>✦</span>Claude API</span><span><span>◇</span>AI Agents</span><span><span>◌</span>Visual Regression</span>
         </div>
       </div>
     </section>
@@ -496,19 +510,19 @@
         <div class="timeline">
           <div class="role reveal">
             <div class="role-date">01 / CLARITY</div>
-            <div><h3>I find the real problem.</h3><p>Before choosing a framework or model, I trace how work actually happens: the exceptions, handoffs and quiet workarounds that never make it into the brief.</p></div>
+            <div><h3>I find the real problem.</h3><p>Before choosing a framework or model, I trace how work actually happens: the exceptions, handoffs and quiet workarounds that never make it into the brief. That turns a vague request into a focused problem with a measurable outcome and a sensible first release.</p></div>
           </div>
           <div class="role reveal">
             <div class="role-date">02 / JUDGMENT</div>
-            <div><h3>I use AI where it earns its place.</h3><p>I design for useful outcomes, not novelty: clear boundaries, human review when it matters, and enough observability to know when a system is wrong.</p></div>
+            <div><h3>I use AI where it earns its place.</h3><p>I design for useful outcomes, not novelty: clear boundaries, human review when it matters, and enough observability to know when a system is wrong. Whether it is an engineering agent or Claude-powered visual comparison, the workflow stays testable, explainable and under control.</p></div>
           </div>
           <div class="role reveal">
             <div class="role-date">03 / OWNERSHIP</div>
-            <div><h3>I carry ideas through to production.</h3><p>Architecture is only useful when it survives contact with users, deployments, data, security and the next engineer who has to change it.</p></div>
+            <div><h3>I carry ideas through to production.</h3><p>Architecture is only useful when it survives contact with users, deployments, data, security and the next engineer who has to change it. I connect the product decision to APIs, persistence, automation, tests and operational feedback so the result is dependable beyond the demo.</p></div>
           </div>
           <div class="role reveal">
             <div class="role-date">04 / MOMENTUM</div>
-            <div><h3>I make the next step obvious.</h3><p>Teams move faster when decisions are visible, complexity is named and the first valuable release is close enough to touch.</p></div>
+            <div><h3>I make the next step obvious.</h3><p>Teams move faster when decisions are visible, complexity is named and the first valuable release is close enough to touch. I prefer incremental delivery: prove the risky part early, learn from real usage, and leave the system easier to extend than it was before.</p></div>
           </div>
         </div>
       </div>
@@ -545,6 +559,17 @@
     }, { threshold: .12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
   </script>
 </body>
 </html>
