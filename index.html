@@ -5,11 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ghulam Ali — AI Automation & Software Engineering</title>
-  <meta name="description" content="Ghulam Ali is a Senior Software Engineer specializing in AI automation, intelligent document processing, .NET, Angular, React, Azure, SaaS and legacy modernization." />
+  <meta name="description" content="Ghulam Ali is a software engineer with 8+ years of experience building .NET, Angular, React and Azure systems, AI coding agents and visual regression platforms." />
   <meta name="author" content="Ghulam Ali" />
   <meta property="og:title" content="Ghulam Ali — AI Automation & Software Engineering" />
-  <meta property="og:description" content="I build AI-powered automation systems and robust enterprise software." />
+  <meta property="og:description" content="I build reliable software, AI coding agents and automated visual testing platforms." />
   <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #08090d;
@@ -216,6 +219,125 @@
       footer { display:block; }
       footer div + div { margin-top:10px; }
     }
+
+    /* Editorial portfolio treatment */
+    :root {
+      --bg: #f3f0e9;
+      --panel: #fffdf8;
+      --panel-2: #e6e1d7;
+      --text: #18202a;
+      --muted: #687078;
+      --line: #d8d2c8;
+      --accent: #d85d3f;
+      --accent-2: #1d6b68;
+      --max: 1180px;
+      --radius: 4px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    body::before {
+      opacity: .5;
+      background-image: radial-gradient(#b7afa2 0.7px, transparent 0.7px);
+      background-size: 18px 18px;
+      mask-image: linear-gradient(to bottom, black, transparent 50%);
+    }
+    .nav {
+      background: rgba(243,240,233,.88);
+      border-bottom-color: var(--line);
+    }
+    .logo { letter-spacing:-.06em; }
+    .logo span, .kicker, .role-company { color: var(--accent); }
+    .nav-links { color: #687078; }
+    .nav-cta { border-color: var(--text); background: var(--text); color: var(--bg); border-radius: 3px; }
+    .hero { padding: 105px 0 90px; }
+    .hero > .container { position: relative; }
+    .hero > .container::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      right: 5%;
+      top: 25px;
+      opacity: .65;
+    }
+    .eyebrow {
+      color: var(--accent-2);
+      border-color: rgba(29,107,104,.3);
+      background: transparent;
+      border-radius: 3px;
+    }
+    .dot { background: var(--accent); box-shadow: none; }
+    h1, h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+    h1 { max-width: 900px; font-size: clamp(58px, 8.4vw, 112px); line-height: .88; margin: 30px 0; }
+    h1 .gradient { background: none; color: var(--accent); }
+    .hero-copy { max-width: 610px; color: #4e5961; font-size: 19px; }
+    .hero-actions { margin-top: 30px; }
+    .btn { border-radius: 3px; padding: 14px 19px; }
+    .btn-primary { background: var(--accent); color: #fffaf2; border-color: var(--accent); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(216,93,63,.18); }
+    .btn-secondary { color: var(--text); background: transparent; border-color: var(--text); }
+    .btn-secondary:hover { background: var(--text); color: var(--bg); }
+    .metrics { margin-top: 76px; border: 0; border-top: 1px solid var(--text); border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
+    .metric { padding: 20px 20px 20px 0; border-right: 0; }
+    .metric strong { font-size: 22px; }
+    .metric span { color: var(--muted); }
+    section { padding: 115px 0; }
+    .section-head { margin-bottom: 48px; }
+    .kicker { letter-spacing: .12em; }
+    h2 { font-size: clamp(42px, 5.5vw, 70px); line-height: .92; }
+    .section-intro { color: #59636a; }
+    .services { grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .card { border: 0; border-radius: 0; background: var(--panel); padding: 26px 22px 28px; }
+    .card::after { display: none; }
+    .card:hover { transform: none; background: #fff8ed; }
+    .number { color: var(--accent); }
+    .card h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 29px; line-height: .98; margin: 45px 0 12px; }
+    .card p, .project p, .role p { color: #59636a; }
+    .tag, .stack span { color: var(--accent-2); background: transparent; border-color: #b8cbc5; border-radius: 2px; }
+    .project { grid-template-columns: .9fr 1.1fr; min-height: 330px; border-color: var(--line); border-radius: 0; background: var(--panel); }
+    .project:hover { border-color: var(--accent); }
+    .project-visual { min-height: 330px; padding: 24px; background: #dce5df; }
+    .project:nth-child(2) .project-visual { background: #e8d9cf; }
+    .project:nth-child(3) .project-visual { background: #d8dfe9; }
+    .visual-grid { height: 190px; border-color: rgba(24,32,42,.18); background-image: linear-gradient(rgba(24,32,42,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(24,32,42,.1) 1px, transparent 1px); }
+    .visual-grid::after { border-color: var(--accent); box-shadow: none; border-radius: 2px; }
+    .project-content { padding: 44px; }
+    .project-label { color: var(--accent-2); }
+    .project h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 40px; line-height: .95; }
+    .project-tech { color: var(--accent-2); }
+    .stack { gap: 8px; }
+    .stack span { padding: 9px 12px; }
+    .timeline { border-top-color: var(--text); }
+    .role { grid-template-columns: 190px 1fr; border-bottom-color: var(--line); }
+    .role-date { color: var(--accent); }
+    .role h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 28px; }
+    .cta { border-color: var(--text); border-radius: 0; padding: 72px 40px; background: var(--text); }
+    .cta .kicker, .cta h2 { color: var(--bg); }
+    .cta p { color: #bdc3c2; }
+    .cta .btn-primary { background: var(--accent); color: #fffaf2; border-color: var(--accent); }
+    .cta .btn-secondary { color: var(--bg); border-color: var(--bg); }
+    footer { color: #7d817e; }
+    .reveal { transform: translateY(12px); }
+
+    @media(max-width:800px) {
+      .hero > .container::after { width: 90px; height: 90px; right: 4%; top: 35px; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .project { grid-template-columns: 1fr; }
+      .project-visual { min-height: 220px; }
+    }
+    @media(max-width:520px) {
+      h1 { font-size: 58px; }
+      .services { grid-template-columns: 1fr; }
+      .hero > .container::after { display: none; }
+      .project-content { padding: 28px 24px; }
+      .project h3 { font-size: 35px; }
+    }
   </style>
 </head>
 
@@ -224,9 +346,9 @@
     <div class="container nav-inner">
       <a class="logo" href="#">GA<span>.</span></a>
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
+        <a href="#services">Capabilities</a>
+        <a href="#work">Selected work</a>
+        <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="nav-cta" href="#contact">Let's talk ↗</a>
@@ -236,22 +358,22 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="eyebrow"><span class="dot"></span> Available for selected projects</div>
-        <h1>Software engineering<br><span class="gradient">with AI built in.</span></h1>
+        <div class="eyebrow"><span class="dot"></span> 8+ years · software engineering · practical AI</div>
+        <h1>I build the systems that make <span class="gradient">ambitious work reliable.</span></h1>
         <p class="hero-copy">
-          I build AI-powered automation systems and enterprise software that turn
-          complex business processes into reliable, scalable products.
+          I design and build products, automation and quality systems across .NET,
+          modern front ends and Azure, with AI used where it creates a real advantage.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Start a project ↗</a>
-          <a class="btn btn-secondary" href="#work">See my work</a>
+          <a class="btn btn-primary" href="#contact">Tell me what is stuck ↗</a>
+          <a class="btn btn-secondary" href="#work">See the evidence</a>
         </div>
 
         <div class="metrics reveal">
-          <div class="metric"><strong>8+ years</strong><span>Software engineering</span></div>
-          <div class="metric"><strong>AI + .NET</strong><span>Modern engineering stack</span></div>
-          <div class="metric"><strong>Azure</strong><span>Cloud & distributed systems</span></div>
-          <div class="metric"><strong>End-to-end</strong><span>Architecture to delivery</span></div>
+          <div class="metric"><strong>8+ years</strong><span>Building production software</span></div>
+          <div class="metric"><strong>.NET + web</strong><span>Angular, React and Vue.js</span></div>
+          <div class="metric"><strong>AI agents</strong><span>Code improvements to test coverage</span></div>
+          <div class="metric"><strong>Visual QA</strong><span>Automated UI confidence</span></div>
         </div>
       </div>
     </section>
@@ -261,38 +383,38 @@
         <div class="section-head">
           <div>
             <div class="kicker">What I do</div>
-            <h2>Services built around<br>real business problems.</h2>
+            <h2>Useful technology<br>starts with context.</h2>
           </div>
-          <p class="section-intro">From automating manual workflows to modernizing enterprise applications, I combine software engineering with practical AI.</p>
+          <p class="section-intro">The best solution is rarely “add AI.” It is a sharper understanding of the work, followed by the smallest system that makes it better.</p>
         </div>
 
         <div class="services">
           <article class="card reveal">
-            <span class="number">01 / AI AUTOMATION</span>
-            <h3>AI workflow automation</h3>
-            <p>Design and build intelligent workflows that use LLMs, agents and APIs to automate repetitive knowledge work.</p>
-            <div class="tags"><span class="tag">AI Agents</span><span class="tag">LLMs</span><span class="tag">Claude API</span><span class="tag">Workflow Automation</span></div>
+            <span class="number">01 / FIND THE LEVER</span>
+            <h3>Automate the work worth automating</h3>
+            <p>Map the handoffs, decisions and repetitive work hiding inside a process, then turn the right parts into dependable automation and agent workflows.</p>
+            <div class="tags"><span class="tag">Workflow design</span><span class="tag">GitHub agents</span><span class="tag">Integrations</span></div>
           </article>
 
           <article class="card reveal">
-            <span class="number">02 / DOCUMENT AI</span>
-            <h3>Intelligent document processing</h3>
-            <p>Extract, classify, compare and reason over contracts and business documents, with controls for accuracy and cost.</p>
-            <div class="tags"><span class="tag">Document AI</span><span class="tag">RAG</span><span class="tag">LLM Integration</span><span class="tag">Microsoft Graph</span></div>
+            <span class="number">02 / MAKE KNOWLEDGE USEFUL</span>
+            <h3>Give teams answers, not more tabs</h3>
+            <p>Build document and knowledge systems that retrieve the right context, show their sources and keep people in control.</p>
+            <div class="tags"><span class="tag">Document AI</span><span class="tag">RAG</span><span class="tag">Microsoft Graph</span></div>
           </article>
 
           <article class="card reveal">
-            <span class="number">03 / SOFTWARE</span>
-            <h3>Custom software development</h3>
-            <p>Build robust SaaS products, APIs and business applications using modern .NET, React/Angular and cloud architecture.</p>
-            <div class="tags"><span class="tag">.NET 6–10</span><span class="tag">ASP.NET Core</span><span class="tag">React</span><span class="tag">Angular</span></div>
+            <span class="number">03 / BUILD THE PRODUCT</span>
+            <h3>Ship software people can rely on</h3>
+            <p>Shape the product, architecture and delivery path together, so a promising idea becomes a robust system instead of a fragile demo.</p>
+            <div class="tags"><span class="tag">.NET</span><span class="tag">React</span><span class="tag">Angular</span><span class="tag">Vue.js</span></div>
           </article>
 
           <article class="card reveal">
-            <span class="number">04 / MODERNIZATION</span>
-            <h3>Legacy application modernization</h3>
-            <p>Reverse-engineer undocumented business logic and move legacy desktop/client-server applications to maintainable web architectures.</p>
-            <div class="tags"><span class="tag">Legacy Modernization</span><span class="tag">Azure</span><span class="tag">APIs</span><span class="tag">Cloud Migration</span></div>
+            <span class="number">04 / CHANGE WITHOUT BREAKAGE</span>
+            <h3>Modernize without losing the plot</h3>
+            <p>Recover the business rules inside legacy systems and move them forward in deliberate steps, with the people and data protected.</p>
+            <div class="tags"><span class="tag">Legacy systems</span><span class="tag">Azure</span><span class="tag">APIs</span></div>
           </article>
         </div>
       </div>
@@ -301,8 +423,8 @@
     <section id="work">
       <div class="container">
         <div class="section-head">
-          <div><div class="kicker">Selected work</div><h2>Problems I've<br>helped solve.</h2></div>
-          <p class="section-intro">A selection of engineering work spanning AI, SaaS, integrations and enterprise modernization.</p>
+          <div><div class="kicker">Selected work</div><h2>Proof over<br>promises.</h2></div>
+          <p class="section-intro">A few examples of turning uncertain, high-friction work into products, platforms and practical systems.</p>
         </div>
 
         <div class="work">
@@ -311,8 +433,18 @@
             <div class="project-content">
               <span class="project-label">AI / Quality Engineering</span>
               <h3>AI-powered visual QA</h3>
-              <p>Designed an AI-assisted visual regression platform that screenshots applications and uses Claude to distinguish genuine UI defects from visual noise.</p>
-              <div class="project-tech">.NET · Claude API · Database Design · Secure APIs · Automated Testing</div>
+              <p>Designed a visual regression platform that runs Playwright capture tests, sends image pairs through Claude-powered diff services, and routes UI changes through an approval or rejection flow.</p>
+              <div class="project-tech">Playwright capture pipeline · Claude API · Image diff services · Approval workflows</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual"><div class="visual-grid"></div></div>
+            <div class="project-content">
+              <span class="project-label">AI / Developer Productivity</span>
+              <h3>GitHub engineering agent</h3>
+              <p>Implemented an automation agent that works inside the GitHub development loop, helping identify bugs, improve code and write unit tests so teams can spend more time on decisions that need human judgment.</p>
+              <div class="project-tech">GitHub automation · Code improvement · Bug fixing · Unit test generation</div>
             </div>
           </article>
 
@@ -348,34 +480,35 @@
         <div class="stack reveal">
           <span>C# / .NET 6–10</span><span>ASP.NET Core</span><span>Angular 19</span><span>React</span>
           <span>TypeScript</span><span>Azure</span><span>Azure Service Bus</span><span>Azure DevOps</span>
-          <span>GitHub Actions</span><span>Docker</span><span>SQL Server</span><span>MongoDB</span>
+          <span>GitHub Actions</span><span>GitHub agents</span><span>Playwright</span><span>Docker</span><span>SQL Server</span><span>MongoDB</span>
           <span>Redis</span><span>Entity Framework Core</span><span>Microservices</span><span>CQRS / DDD</span>
-          <span>Microsoft Graph</span><span>SharePoint</span><span>Claude API</span><span>AI Agents</span>
+          <span>Microsoft Graph</span><span>SharePoint</span><span>Claude API</span><span>AI Agents</span><span>Visual Regression</span>
         </div>
       </div>
     </section>
 
-    <section id="experience">
+    <section id="approach">
       <div class="container">
         <div class="section-head">
-          <div><div class="kicker">Experience</div><h2>Engineering experience<br>that compounds.</h2></div>
+          <div><div class="kicker">What experience changes</div><h2>Good engineering<br>is a way of thinking.</h2></div>
+          <p class="section-intro">Years across AI products, enterprise platforms and legacy systems have made me comfortable where the brief is incomplete and the stakes are real.</p>
         </div>
         <div class="timeline">
           <div class="role reveal">
-            <div class="role-date">Apr 2025 — Present</div>
-            <div><h3>Senior Software Engineer</h3><div class="role-company">Contour Software</div><p>AI-powered visual QA, autonomous coding agents, Microsoft Exchange/Outlook integration and legacy Delphi-to-Angular/.NET modernization.</p></div>
+            <div class="role-date">01 / CLARITY</div>
+            <div><h3>I find the real problem.</h3><p>Before choosing a framework or model, I trace how work actually happens: the exceptions, handoffs and quiet workarounds that never make it into the brief.</p></div>
           </div>
           <div class="role reveal">
-            <div class="role-date">Sep 2022 — Mar 2025</div>
-            <div><h3>Technical Lead</h3><div class="role-company">MELIOR ITS</div><p>Led engineering teams across SaaS products; architected MonteurAI, multi-tenant platforms and event-driven microservices.</p></div>
+            <div class="role-date">02 / JUDGMENT</div>
+            <div><h3>I use AI where it earns its place.</h3><p>I design for useful outcomes, not novelty: clear boundaries, human review when it matters, and enough observability to know when a system is wrong.</p></div>
           </div>
           <div class="role reveal">
-            <div class="role-date">Jul 2021 — Sep 2022</div>
-            <div><h3>Software Developer II</h3><div class="role-company">S&P Global</div><p>Built securities reconciliation software and a company-wide encrypted credentials provider service.</p></div>
+            <div class="role-date">03 / OWNERSHIP</div>
+            <div><h3>I carry ideas through to production.</h3><p>Architecture is only useful when it survives contact with users, deployments, data, security and the next engineer who has to change it.</p></div>
           </div>
           <div class="role reveal">
-            <div class="role-date">2018 — 2021</div>
-            <div><h3>Software Developer</h3><div class="role-company">Estrats · TingbA Technologies</div><p>Built business applications, healthcare software, real estate systems, parking management and automated enterprise workflows.</p></div>
+            <div class="role-date">04 / MOMENTUM</div>
+            <div><h3>I make the next step obvious.</h3><p>Teams move faster when decisions are visible, complexity is named and the first valuable release is close enough to touch.</p></div>
           </div>
         </div>
       </div>
