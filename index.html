@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <style>
     :root {
@@ -226,36 +226,36 @@
 
     /* Editorial portfolio treatment */
     :root {
-      --bg: #f3f0e9;
-      --panel: #fffdf8;
-      --panel-2: #e6e1d7;
-      --text: #18202a;
-      --muted: #687078;
-      --line: #d8d2c8;
-      --accent: #d85d3f;
-      --accent-2: #1d6b68;
+      --bg: #f7f4ed;
+      --panel: #fffefa;
+      --panel-2: #e6efeb;
+      --text: #102b38;
+      --muted: #536773;
+      --line: #c9d7d3;
+      --accent: #ee5b45;
+      --accent-2: #007d78;
       --max: 1180px;
       --radius: 4px;
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
-      background: var(--bg);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: radial-gradient(circle at 92% 8%, rgba(238,91,69,.13), transparent 24%), radial-gradient(circle at 5% 48%, rgba(0,125,120,.1), transparent 25%), var(--bg);
       color: var(--text);
     }
     body::before {
       opacity: .5;
-      background-image: radial-gradient(#b7afa2 0.7px, transparent 0.7px);
+      background-image: radial-gradient(#9ebdb8 0.7px, transparent 0.7px);
       background-size: 18px 18px;
       mask-image: linear-gradient(to bottom, black, transparent 50%);
     }
     .nav {
-      background: rgba(243,240,233,.88);
+      background: rgba(247,244,237,.9);
       border-bottom-color: var(--line);
     }
     .logo { letter-spacing:-.06em; }
     .logo span, .kicker, .role-company { color: var(--accent); }
-    .nav-links { color: #687078; }
+    .nav-links { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 700; }
     .nav-cta { border-color: var(--text); background: var(--text); color: var(--bg); border-radius: 3px; }
     .hero { padding: 105px 0 90px; }
     .hero > .container { position: relative; }
@@ -279,10 +279,10 @@
       border-radius: 3px;
     }
     .dot { background: var(--accent); box-shadow: none; }
-    h1, h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
-    h1 { max-width: 900px; font-size: clamp(58px, 8.4vw, 112px); line-height: .88; margin: 30px 0; }
+    h1, h2 { font-family: "Syne", sans-serif; font-weight: 700; letter-spacing: -.055em; }
+    h1 { max-width: 900px; font-size: clamp(54px, 8vw, 108px); line-height: .92; margin: 30px 0; }
     h1 .gradient { background: none; color: var(--accent); }
-    .hero-copy { max-width: 610px; color: #4e5961; font-size: 19px; }
+    .hero-copy { max-width: 610px; color: var(--muted); font-size: 19px; }
     .hero-actions { margin-top: 30px; }
     .btn { border-radius: 3px; padding: 14px 19px; }
     .btn-primary { background: var(--accent); color: #fffaf2; border-color: var(--accent); }
@@ -293,7 +293,7 @@
     .metric { padding: 20px 20px 20px 0; border-right: 0; }
     .metric strong { font-size: 22px; }
     .metric span { color: var(--muted); }
-    section { padding: 115px 0; }
+    section { padding: 96px 0; }
     .section-head { margin-bottom: 48px; }
     .kicker { letter-spacing: .12em; }
     h2 { font-size: clamp(42px, 5.5vw, 70px); line-height: .92; }
@@ -303,14 +303,15 @@
     .card::after { display: none; }
     .card:hover { transform: none; background: #fff8ed; }
     .number { color: var(--accent); }
-    .card h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 29px; line-height: .98; margin: 45px 0 12px; }
-    .card p, .project p, .role p { color: #59636a; }
+    .card h3 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 25px; line-height: 1.05; margin: 45px 0 12px; }
+    .card p, .project p, .role p { color: var(--muted); }
     .tag, .stack span { color: var(--accent-2); background: transparent; border-color: #b8cbc5; border-radius: 2px; }
     .project { grid-template-columns: .9fr 1.1fr; min-height: 330px; border-color: var(--line); border-radius: 0; background: var(--panel); }
     .project:hover { border-color: var(--accent); }
-    .project-visual { min-height: 330px; padding: 24px; background: #dce5df; }
-    .project:nth-child(2) .project-visual { background: #e8d9cf; }
-    .project:nth-child(3) .project-visual { background: #d8dfe9; }
+    .project-visual { min-height: 330px; padding: 24px; background: #cce9e2; }
+    .project:nth-child(2) .project-visual { background: #ffe0d5; }
+    .project:nth-child(3) .project-visual { background: #dbe5f2; }
+    .project:nth-child(4) .project-visual { background: #f5e5b9; }
     .visual-grid { height: 190px; border-color: rgba(24,32,42,.18); background-image: linear-gradient(rgba(24,32,42,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(24,32,42,.1) 1px, transparent 1px); }
     .visual-grid::after { border-color: var(--accent); box-shadow: none; border-radius: 2px; }
     .proof-mark {
@@ -319,11 +320,11 @@
       border: 1px solid rgba(24,32,42,.3); border-radius: 50%;
       color: var(--text); font-size: 24px; font-weight: 700; letter-spacing: -.08em;
     }
-    .proof-mark span { font-family: "Instrument Serif", Georgia, serif; font-size: 30px; font-weight: 400; }
+    .proof-mark span { font-family: "Syne", sans-serif; font-size: 24px; font-weight: 700; }
     .proof-mark i { font-size: 28px; }
     .project-content { padding: 44px; }
     .project-label { color: var(--accent-2); }
-    .project h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 40px; line-height: .95; }
+    .project h3 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 34px; line-height: 1; }
     .project-tech { color: var(--accent-2); }
     .stack { gap: 8px; }
     .stack span { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; }
@@ -331,7 +332,7 @@
     .timeline { border-top-color: var(--text); }
     .role { grid-template-columns: 190px 1fr; border-bottom-color: var(--line); }
     .role-date { color: var(--accent); }
-    .role h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 28px; }
+    .role h3 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 25px; }
     .cta { border-color: var(--text); border-radius: 0; padding: 72px 40px; background: var(--text); }
     .cta .kicker, .cta h2 { color: var(--bg); }
     .cta p { color: #bdc3c2; }
@@ -359,10 +360,10 @@
   <header class="nav">
     <div class="container nav-inner">
       <nav class="nav-links">
-        <a class="active" href="#services">Capabilities</a>
-        <a href="#work">Selected Work</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="#services">CAPABILITIES</a>
+        <a href="#work">SELECTED WORK</a>
+        <a href="#approach">APPROACH</a>
+        <a href="#contact">CONTACT</a>
       </nav>
       <a class="nav-cta" href="#contact">Let's talk ↗</a>
     </div>
@@ -477,8 +478,8 @@
             <div class="project-content">
               <span class="project-label">Modernization / Enterprise</span>
               <h3>Legacy Delphi → modern web</h3>
-              <p>Reverse-engineered complex desktop business logic and delivered a modern Angular + .NET architecture for projects and time management.</p>
-              <div class="project-tech">Angular 19 · .NET 10 · OpenAPI · Business Logic Migration</div>
+              <p>Rebuilt the project and time-management workflows behind a business platform like Zeit AG's, moving complex Delphi rules into an Angular + .NET web experience. The result brought time capture, project visibility, team performance, planning, absence and leave into a clearer system instead of disconnected desktop workflows and spreadsheets.</p>
+              <div class="project-tech">Angular 19 · .NET 10 · OpenAPI · Time tracking · Project visibility · Business logic migration</div>
             </div>
           </article>
         </div>
